@@ -7,17 +7,14 @@
         <div class="container">
             <div class="box">
                 <form method="POST">
-                    <h1>CALCULADORA DE SOMAR</h1>
+                    <h1>CALCULADORA DE ADIÇÃO</h1>
                 <?php 
-
-
-                $valor1 = isset($_POST['valor1']) ? $_POST['valor1'] : null;
-                $valor2 = isset($_POST['valor2']) ? $_POST['valor2'] : null;
-                $soma = $valor1 + $valor2;
-                $result = number_format($soma, 2, ',', '.');
-                echo "<input placeholder='$result' class='caixa' disabled='disabled'>";
-
-?>
+                    $valor1 = isset($_POST['valor1']) ? $_POST['valor1'] : null;
+                    $valor2 = isset($_POST['valor2']) ? $_POST['valor2'] : null;
+                    $soma = $valor1 + $valor2;
+                    $result = number_format($soma, 2, ',', '.');
+                    echo "<input placeholder='$result' class='caixa' disabled='disabled'>";
+                ?>
                     <input type="text" id="valor1" name="valor1"  onkeypress='return SomenteNumero(event)' required autocomplete="off">
                     <label>+</label>
                     <input type="text" id="valor2" name="valor2"  onkeypress='return SomenteNumero(event)' required autocomplete="off">
